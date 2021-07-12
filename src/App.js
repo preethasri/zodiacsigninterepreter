@@ -7,6 +7,7 @@ const zodiacDictionary = {
   "♋": "name:Cancer,meaning:supportive and caring",
   "♌": "name:Leo,meaning:proud and outspoken",
   "♍": "name:Virgo, meaning:clean and calm",
+
   "♎": "name:Libra, meaning:fair and accepting",
   "♏": "name:scorpics, meaning:careful and brilliant",
   "♐": "name:sagittarius, meaning:passionate and adventurous",
@@ -48,10 +49,16 @@ export default function App() {
       {zodiacSign.map((zodiac) => (
         <span
           onClick={() => zodiacClickHandler(zodiac)}
-          style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+          style={{
+            fontSize: "2rem",
+            padding: "0.5rem",
+            cursor: "pointer",
+            lineBreak: "anywhere"
+          }}
         >
           {""}
           {zodiac}
+
           {""}
         </span>
       ))}
